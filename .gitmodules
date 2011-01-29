@@ -1,3 +1,0 @@
-[submodule "vendor/vim-update-bundles"]
-	path = vendor/vim-update-bundles
-	url = https://github.com/bronson/vim-update-bundles.git

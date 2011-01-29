@@ -1,16 +1,27 @@
 require 'rake'
 require 'erb'
+require 'fileutils'
+require 'open-uri'
 
-desc "Install vim-update-bundles"
-task :setup_vim => [:install] do
-    `git submodule update --init`
-    src_file = File.join(File.dirname(__FILE__), 'vendor', 'vim-update-bundles', 'vim-update-bundles')
-    target_file = File.join(ENV['HOME'], '.bin', 'vim-update-bundles')
-    FileUtils.ln_s(src_file, target_file, :force => true) if File.exists?(src_file)
+task :default => [:install]
+
+desc "Install or update the whole package"
+task :install => [:setup_dotfiles, :setup_vim]
+
+desc "Install vim-update-bundles and pathogen"
+task :setup_vim do
+    pathogen = "https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim"
+    vim_update_bundles = "https://github.com/bronson/vim-update-bundles/raw/master/vim-update-bundles"
+
+    FileUtils.mkdir_p(File.join(ENV['HOME'], '.vim', 'autoload'))
+    puts "Install pathogen vim plugin from #{pathogen}"
+    download_file pathogen, File.join(ENV['HOME'], '.vim', 'autoload', 'pathogen.vim')
+    puts "Install vim-update-bundles utility from #{vim_update_bundles}"
+    download_file vim_update_bundles, File.join(ENV['HOME'], '.bin', 'vim-update-bundles')
 end
 
-desc "install the dot files into user's home directory"
-task :install do
+desc "Install the dot files into user's home directory"
+task :setup_dotfiles do
   replace_all = false
   Dir['*'].each do |file|
     next if %w[Rakefile README.rdoc LICENSE].include? file
@@ -56,3 +67,12 @@ def link_file(file)
     system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
   end
 end
+
+def download_file url, file
+  open(url) do |r|
+    File.open(file, 'w') do |w|
+      w.write(r.read)
+    end
+  end
+end
+
