@@ -6,6 +6,4 @@ vim/plugin
 vim/doc
 vim/.netrwhist
 vim/syntax
-vim/tmp/swap/*
-vim/tmp/backup/*
 vim/vimrc

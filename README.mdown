@@ -23,6 +23,7 @@ You must have git, ruby and rake installed. If it's done then:
 
     cd 
     git clone https://github.com/nel/dotfiles .dotfiles
+    cd .dotfiles
     rake install
 
 It won't delete your existing config, but will offer you to rename it.
@@ -46,12 +47,11 @@ of oh-my-zsh
 If you intend to use the vim configuration, before you start must install
 vim-bundle-update, go in the dotfiles dir and do:
 
-    $ git submodule update --init
-    $ rake setup_vim    
+    rake setup_vim
 
 And then run it (The PATH dotfiles path must be included and properly include contain ~/.bin)
 
-    $ vim-bunble-updates
+    vim-bunble-updates
 
 It will download and configure all the plugins
 
