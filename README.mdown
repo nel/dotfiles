@@ -49,7 +49,7 @@ vim-bundle-update, go in the dotfiles dir and do:
 
 And then run it (The PATH dotfiles path must be included and properly include contain ~/.bin)
 
-    vim-bunble-updates
+    vim-update-bundles
 
 It will download and configure all the plugins
 
