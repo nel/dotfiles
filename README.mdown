@@ -22,7 +22,7 @@ https://github.com/bronson/vim-update-bundles and thus not included here
 You must have git, ruby and rake installed. If it's done then:
 
     git clone https://github.com/nel/dotfiles ~/.dotfiles && cd ~/.dotfiles &&
-    rake install
+    rake
 
 It won't delete your existing config, but will offer you to rename it.
 
@@ -33,7 +33,7 @@ enjoy it.
 
 The included .zshrc depends on oh-my-zsh https://github.com/robbyrussell/oh-my-zsh
 
-To install run:
+To install it run:
 
     wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
 
@@ -42,14 +42,18 @@ of oh-my-zsh
 
 # Vim
 
-If you intend to use the vim configuration, before you start must install
-vim-bundle-update, go in the dotfiles dir and do:
+If you intend to use the vim configuration, you must run vim-update-bundles to 
+download all the dependencies:
 
-    cd ~/.dotfiles && rake setup_vim
+    ~/bin/vim-update-bundles
 
-And then run it (The PATH dotfiles path must be included and properly include contain ~/.bin)
+It will download and configure all the plugins, just reload and your done
 
-    vim-update-bundles
+# Troubleshooting
 
-It will download and configure all the plugins
+Have you reload / source your environment dude ?
+Do you have git, ruby and rake installed ?
+Have you used all the dotfiles ?
+
+In this case I am sorry, drop me a mail nel@w3fu.com
 
