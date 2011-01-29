@@ -17,13 +17,18 @@ The zsh part rely on https://github.com/robbyrussell/oh-my-zsh
 The vim plugins are versioned through the excellent 
 https://github.com/bronson/vim-update-bundles and thus not included here
 
-# Vim
+# Installation:
+    
+You must have git, ruby and rake installed. If it's done then:
 
-If you intend to use the vim configuration, before you start run
+    cd 
+    git clone https://github.com/nel/dotfiles .dotfiles
+    rake install
 
-    $ vim-bunble-updates
+It won't delete your existing config, but will offer you to rename it.
 
-It will download and configure all plugins
+Don't forget to reload your terminal or source the  ~/.bashrc and ~/.zshrc to
+enjoy it.
 
 # Zsh
 
@@ -35,3 +40,18 @@ To install run:
 
 The current version depends on the iterm plugin that is still in my own branch
 of oh-my-zsh
+
+# Vim
+
+If you intend to use the vim configuration, before you start must install
+vim-bundle-update, go in the dotfiles dir and do:
+
+    $ git submodule update --init
+    $ rake setup_vim    
+
+And then run it (The PATH dotfiles path must be included and properly include contain ~/.bin)
+
+    $ vim-bunble-updates
+
+It will download and configure all the plugins
+

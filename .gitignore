@@ -1,3 +1,4 @@
+bin/vim-update-bundles
 *~
 *.swp
 vim/autoload
@@ -5,6 +6,6 @@ vim/plugin
 vim/doc
 vim/.netrwhist
 vim/syntax
-vim/bundle/*
 vim/tmp/swap/*
 vim/tmp/backup/*
+vim/vimrc

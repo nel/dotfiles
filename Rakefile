@@ -1,6 +1,14 @@
 require 'rake'
 require 'erb'
 
+desc "Install vim-update-bundles"
+task :setup_vim => [:install] do
+    `git submodule update --init`
+    src_file = File.join(File.dirname(__FILE__), 'vendor', 'vim-update-bundles', 'vim-update-bundles')
+    target_file = File.join(ENV['HOME'], '.bin', 'vim-update-bundles')
+    FileUtils.ln_s(src_file, target_file, :force => true) if File.exists?(src_file)
+end
+
 desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
