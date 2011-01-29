@@ -1,0 +1,12 @@
+#escape+p search bash history
+"\ep": history-search-backward
+
+#autoexpand bash history stuff
+#if is for not breaking mysql client
+$if bash
+Space: magic-space
+$endif
+
+#when ^R up and down will search backward forward
+"\e[A":history-search-backward
+"\e[B":history-search-forward

@@ -1,0 +1,10 @@
+#export EDITOR='/usr/local/bin/mvim -f -c "au VimLeave * !open -a Terminal"'
+export EDITOR='/usr/local/bin/mvim -f'
+export GIT_EDITOR=$EDITOR
+
+export PATH="$HOME/.bin:$PATH:$HOME/.gem/ruby/1.8/bin"
+export PATH=`brew --prefix`/bin:`brew --prefix`/sbin:$PATH
+
+export MANPATH=`brew --prefix`/share/man:$MANPATH
+
+export LC_ALL="en_US.UTF-8"

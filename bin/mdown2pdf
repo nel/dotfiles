@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+$-w = true
+
+if ARGV[1] && File.exists?(ARGV[0])
+  system("markdown #{ARGV[0]} > /tmp/markdown.html")
+  system("wkpdf --source /tmp/markdown.html --format A4 --output #{ARGV[1]}")
+  system("open", ARGV[1])
+else
+  puts "Please use: mdown2pdf input_file output_file"
+  exit(1)
+end

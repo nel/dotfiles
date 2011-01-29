@@ -1,0 +1,37 @@
+# Introduction
+
+Yet another dotfiles from yet another programmer.
+
+This setup has a hard dependency on Ruby and Git and a loosy dependency on OSX
+and homebrew (that could be easily fixed).
+
+This is optimized for an heavy usage of vim, ruby, gem, git, bash & zsh and support 
+some optionnal optimization for OSX, iterm2, ack ...
+
+I don't own the copyright on most of the code, this is a patchwork of stuff I 
+accumulated over time. I tried to use the structure of 
+https://github.com/ryanb/dotfiles but the content itself differ.
+
+The zsh part rely on https://github.com/robbyrussell/oh-my-zsh
+
+The vim plugins are versioned through the excellent 
+https://github.com/bronson/vim-update-bundles and thus not included here
+
+# Vim
+
+If you intend to use the vim configuration, before you start run
+
+    $ vim-bunble-updates
+
+It will download and configure all plugins
+
+# Zsh
+
+The included .zshrc depends on oh-my-zsh https://github.com/robbyrussell/oh-my-zsh
+
+To install run:
+
+    wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+
+The current version depends on the iterm plugin that is still in my own branch
+of oh-my-zsh

@@ -1,0 +1,20 @@
+alias g='git'
+alias gst='git status'
+alias flushcache='dscacheutil -flushcache'
+alias top='top -ocpu'
+alias unload='launchctl unload -w'
+alias load='launchctl load -w'
+alias start_mysql='load ~/Library/LaunchDaemons/com.mysql.mysqld.plist'
+alias stop_mysql='unload ~/Library/LaunchDaemons/com.mysql.mysqld.plist'
+alias ev="vi ~/.vimrc"
+alias eb="vi ~/.bash_profile"
+alias sb="source ~/.bash_profile"
+alias ez="vi ~/.zshrc"
+alias sz="source ~/.zshrc"
+
+alias vi=$EDITOR
+
+#Update homebrew software
+alias brew_update_all="brew outdated | cut -f 1 | xargs brew install"
+
+

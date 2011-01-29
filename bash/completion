@@ -1,0 +1,20 @@
+#Tab Completions
+set completion-ignore-case On
+
+#Rake
+complete -C ~/.bash/completion_scripts/rake_completion -o default rake
+
+#Capistrano
+complete -C ~/.bash/completion_scripts/capistrano_completion -o default cap
+
+#SSH
+source ~/.bash/completion_scripts/ssh_completion
+
+#rvm completion
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
+
+#GIT completion (require git installation trough homebrew)
+source /usr/local/etc/bash_completion.d/git-completion.bash
+
+#Homebrew Completion (require homebrew)
+source /usr/local/Library/Contributions/brew_bash_completion.sh

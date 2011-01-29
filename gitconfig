@@ -1,0 +1,24 @@
+[alias]
+  st = status
+  co = checkout
+  ci = commit
+  br = branch
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+[user]
+  email = nel@w3fu.com
+  name = Renaud (Nel) Morvan
+[push]
+  default = current
+[apply]
+  whitespace = nowarn
+[core]
+  editor = vim
+[branch]
+  # When creating a new branch off a remote branch, always set it up to
+  # track the remote branch so that we can pull from there.
+  autoseupmerge = always
+
