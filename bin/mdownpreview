@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+$-w = true
+
+if File.exists?(ARGV[0])
+  system("mdown2pdf #{ARGV[0]} /tmp/markdown.pdf")
+  system("open", "/tmp/markdown.pdf")
+else
+  puts "Please use: mdownpreview input_file output_file"
+  exit(1)
+end
