@@ -3,7 +3,6 @@ call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 
 set nocompatible
-set title
 
 " Security
 set modelines=0
@@ -21,19 +20,24 @@ set smarttab                    " insert tabs on the start of a line according t
 
 " Basic options
 set autowrite                   " Automatically save before commands like :next and :make
-set encoding=utf-8
+set encoding=utf-8              " 2011 baby !
 set scrolloff=3
 set showmode
 set showcmd
 set hidden
 set wildmenu
 set wildmode=list:longest
-set visualbell
-set cursorline
+set cursorline                  " display the current line
 set ttyfast
 set ruler
 set backspace=indent,eol,start  " backspc over every char in insert mode
-set laststatus=2
+set laststatus=2                " Always a status line
+set history=1000                " remember more commands and search history
+set undolevels=1000             " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.rbx,*~ " ignore during file completion
+set title                       " change the terminal's title
+set visualbell                  " beep visually
+set noerrorbells                " don't beep
 
 " Status line
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)
@@ -44,10 +48,7 @@ set directory=~/.vim/tmp/swap/      " swap files
 set backup                          " enable backups
 
 " Leader
-let mapleader = ","
-
-" Make Y not dumb
-nnoremap Y y$
+let mapleader = ","                 " Remap leader key to more accessible one
 
 " Searching
 nnoremap / /\v
