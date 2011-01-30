@@ -1,0 +1,9 @@
+#homebrew
+which brew > /dev/null && export brew_path=`brew --prefix`
+
+#rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+#mvim
+[[ -s "$brew_path/bin/mvim" ]] && export mvim_path="$brew_path/bin/mvim"
+

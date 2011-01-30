@@ -2,20 +2,28 @@
 
 Yet another dotfiles from yet another programmer.
 
-This setup has a hard dependency on Ruby and Git and a loosy dependency on OSX
-and homebrew (that could be easily fixed).
+This setup has a hard dependency on Ruby and Git and is particularly optimized
+for OSX.
 
 This is optimized for an heavy usage of vim, ruby, gem, git, bash & zsh and support 
-some optionnal optimization for OSX, iterm2, ack ...
+some optionnal optimization for OSX, iterm2, ack, homebrew ...
 
-I don't own the copyright on most of the code, this is a patchwork of stuff I 
+I tried to freeze the less dependencies that I could in those dotfiles so that you
+can upgrade a package and benefit improvements without having to update those
+dotfiles. This means that most completion, utilities, ... are outsourced to the
+related homebrew package, github project or rubygems and updated from it.
+
+I also try not to be too opiniated, if you don't want to use something vi,
+homebrew, bash, zsh ... just don't use it.
+
+I don't own the copyright on some of the code, this is a patchwork of stuff I 
 accumulated over time. I tried to use the structure of 
 https://github.com/ryanb/dotfiles but the content itself differ.
 
-The zsh part rely on https://github.com/robbyrussell/oh-my-zsh
+The zsh part rely on the excellent https://github.com/robbyrussell/oh-my-zsh
 
 The vim plugins are versioned through the excellent 
-https://github.com/bronson/vim-update-bundles and thus not included here
+https://github.com/bronson/vim-update-bundles
 
 # Installation:
     
@@ -28,6 +36,41 @@ It won't delete your existing config, but will offer you to rename it.
 
 Don't forget to reload your terminal or source the  ~/.bashrc and ~/.zshrc to
 enjoy it.
+
+# Global customizations (for bash & zsh)
+
+## Iterm:
+
+If you use iterm or iterm 2 on OSX you'll get tab and windows title customized
+
+## Homebrew:
+
+If homebrew is installed all path will be configured including manpage
+If you install bash_completion package you'll get completion for some package
+like ack and git
+
+## Rvm
+
+If installed rvm will be loaded
+
+## Bindings
+
+You can access ^R history search and navigate through the results by simply using
+up/down once you start typing content in the shell.
+
+If no content has been typed, up/down has its defaut behavior (navigate history)
+
+# Bash
+
+To get maximum completion including git, ack and system tools (ssh ...)
+you are recommanded to install homebrew and do a brew install
+bash_completion (should work with apt-get or macport too by the way, but
+git completion has not been frozen in those dotfiles).
+It will work without nevertheless but you'll miss some nice
+customization like current git branch in prompt...
+
+You can customize bash by adding a ~/.local_bash file, it will be easier for
+you to maintain than hacking directly in the .bashrc.
 
 # Zsh
 

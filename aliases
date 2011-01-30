@@ -7,10 +7,14 @@ alias load='launchctl load -w'
 alias start_mysql='load ~/Library/LaunchDaemons/com.mysql.mysqld.plist'
 alias stop_mysql='unload ~/Library/LaunchDaemons/com.mysql.mysqld.plist'
 alias ev="vi ~/.vimrc"
-alias eb="vi ~/.bash_profile"
-alias sb="source ~/.bash_profile"
+alias eb="vi ~/.bashrc"
+alias sb="source ~/.bashrc"
 alias ez="vi ~/.zshrc"
 alias sz="source ~/.zshrc"
+
+alias ll="ls -lah"
+alias lm='ll | less'
+alias sl=ls
 
 alias vi=$EDITOR
 

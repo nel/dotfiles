@@ -23,11 +23,14 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
+#feature detection
+source $HOME/.detect_resources
+
 #PATH, EDITOR, ...
-source $HOME/.globalrc
+source $HOME/.paths
 
 #alias
-source $HOME/.aliasrc
+source $HOME/.aliases
 
 #rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

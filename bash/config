@@ -1,23 +1,18 @@
-#Set title in iterm
 # -G = enable colors
 alias ls="ls -G"
-alias ll="ls -la -h"
-alias lm='ll | less'
 
 #Shell history
-export HISTCONTROL=erasedups
+export HISTCONTROL=erasedups #no duplicate
 export HISTSIZE=10000
 shopt -s histappend
 
 #EC2
 [[ -s "$HOME/.ec2/.ec2_env" ]] && . "$HOME/.ec2/.ec2_env"
 
+#Set title initerm
 if [ $TERM_PROGRAM == "iTerm.app" ]; then
     export PROMPT_COMMAND='echo -ne "\033]2;[bash] ${USER}@${HOSTNAME%%.*}: ${PWD/#$HOME/~}\007";echo -ne "\033]1;$(basename "$(dirname "$PWD")")/$(basename "$PWD")\007"';
 fi
-
-#rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 #prompt
 __ruby_ps1 ()
@@ -31,18 +26,8 @@ __ruby_ps1 ()
     fi
 }
 
-#export PS1='\u@\h$(__ruby_ps1):\w\$ '
-export PS1='\u \W$(__git_ps1 "(\[\033[0;33m\]%s\[\033[00m\])")\$ '
-
-export DIMELO_ROOT_PATH=$HOME/ruby/dimelo
-export DIMELO_BASHRC=$DIMELO_ROOT_PATH/ideas/vendor/plugins/stack_deployment/goodies/feedback20.bash 
-
-if [ -f $DIMELO_BASHRC ]; then
-  DIMELOMD5=`md5 -q $DIMELO_BASHRC`
-  
-  if [ "$DIMELOMD5" == "e343ae8a32e5590c2d649256d76fdef4" ]; then
-    source $DIMELO_BASHRC
-  else
-    echo "Shared dimelo bashrc has changed to $DIMELOMD5, we do not happened automagically"
-  fi
+if type __git_ps1 &>/dev/null; then
+    export PS1='\u \W$(__git_ps1 "(\[\033[0;33m\]%s\[\033[00m\])")\$ '
+else
+    export PS1='\u $(__ruby_ps1) \W\$ '
 fi

@@ -7,20 +7,19 @@ complete -C ~/.bash/completion_scripts/rake_completion -o default rake
 #Capistrano
 complete -C ~/.bash/completion_scripts/capistrano_completion -o default cap
 
-#SSH
-source ~/.bash/completion_scripts/ssh_completion
-
 #rvm completion
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
-#Homebrew Completion (require homebrew)
-[[ -s /usr/local/Library/Contributions/brew_bash_completion.sh ]] && source /usr/local/Library/Contributions/brew_bash_completion.sh
+if [[ -n $brew_path ]]; then
+    #Homebrew Completion (require homebrew)
+    [[ -s $brew_path/Library/Contributions/brew_bash_completion.sh ]] && source $brew_path/Library/Contributions/brew_bash_completion.sh
 
-# Use howbrew completion (require bash_complation package) will provide git,
-# ack complation with the package along with tons of other, look at
-# /usr/local/etc/completion.d
-# If you don't want all the crap don't install bash_completion and just source
-# git for example
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+    # (require bash_complation package, brew install bash_completion) will provide 
+    # git, and ack complation along with any system command line utility, look at
+    # /usr/local/etc/completion.d for details
+    # If you don't want all the crap don't install bash_completion and just source
+    # git for example
+    if [ -f $brew_path/etc/bash_completion ]; then
+    . $brew_path/etc/bash_completion
+    fi
 fi
