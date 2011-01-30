@@ -1,4 +1,0 @@
-# Tab completion for ssh hosts, from:
-#  http://feeds.macosxhints.com/~r/macosxhints/recent/~3/257065700/article.php
-SSH_COMPLETE=( $(cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | egrep -v \[[13456789]) )
-complete -o default -W "${SSH_COMPLETE[*]}" ssh

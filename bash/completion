@@ -13,8 +13,14 @@ source ~/.bash/completion_scripts/ssh_completion
 #rvm completion
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
-#GIT completion (require git installation trough homebrew)
-source /usr/local/etc/bash_completion.d/git-completion.bash
-
 #Homebrew Completion (require homebrew)
-source /usr/local/Library/Contributions/brew_bash_completion.sh
+[[ -s /usr/local/Library/Contributions/brew_bash_completion.sh ]] && source /usr/local/Library/Contributions/brew_bash_completion.sh
+
+# Use howbrew completion (require bash_complation package) will provide git,
+# ack complation with the package along with tons of other, look at
+# /usr/local/etc/completion.d
+# If you don't want all the crap don't install bash_completion and just source
+# git for example
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
