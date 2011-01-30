@@ -80,9 +80,6 @@ To install it run:
 
     wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
 
-The current version depends on the iterm plugin that is still in my own branch
-of oh-my-zsh
-
 # Vim
 
 If you intend to use the vim configuration, you must run vim-update-bundles to 
