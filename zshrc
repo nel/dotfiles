@@ -38,5 +38,4 @@ source $HOME/.paths
 #alias
 source $HOME/.aliases
 
-#rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[[ -s  $HOME/.local_zshrc ]] && .  $HOME/.local_zshrc
