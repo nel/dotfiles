@@ -1,5 +1,12 @@
 if [[ -n $mvim_path ]]; then
-    export EDITOR=$mvim_path
+    export EDITOR="$mvim_path -f -g"
+
+    #fix problem with loss of focus
+    if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
+        export EDITOR="$EDITOR -c \"au VimLeave * !open -a iTerm\""
+    elif [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
+        export EDITOR="$EDITOR -c \"au VimLeave * !open -a Terminal\""
+    fi
 else
     export EDITOR='/usr/bin/vi'
 fi
