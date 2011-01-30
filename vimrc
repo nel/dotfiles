@@ -12,15 +12,17 @@ set modelines=0
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set shiftround
 set expandtab
-set copyindent
+set shiftround                  " use multiple of shiftwidth when indenting
+set autoindent                  " use auto indent, use set paste to copy text in Term
+set copyindent                  " copy indentation on autoindent
+set smarttab                    " insert tabs on the start of a line according to
+                                "    shiftwidth, not tabstop
 
 " Basic options
-set autowrite       " Automatically save before commands like :next and :make
+set autowrite                   " Automatically save before commands like :next and :make
 set encoding=utf-8
 set scrolloff=3
-set autoindent
 set showmode
 set showcmd
 set hidden
@@ -30,16 +32,16 @@ set visualbell
 set cursorline
 set ttyfast
 set ruler
-set backspace=indent,eol,start
+set backspace=indent,eol,start  " backspc over every char in insert mode
 set laststatus=2
 
 " Status line
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)
 
 " Backups
-set backupdir=~/.vim/tmp/backup/ " backups
-set directory=~/.vim/tmp/swap/   " swap files
-set backup                        " enable backups
+set backupdir=~/.vim/tmp/backup/    " backups
+set directory=~/.vim/tmp/swap/      " swap files
+set backup                          " enable backups
 
 " Leader
 let mapleader = ","
@@ -50,15 +52,17 @@ nnoremap Y y$
 " Searching
 nnoremap / /\v
 vnoremap / /\v
-set ignorecase
-set smartcase
-set incsearch
-set showmatch
-set hlsearch
-set gdefault
-map <leader><space> :noh<cr>
-runtime macros/matchit.vim
-nmap <tab> %
+set ignorecase               " ignore case
+set smartcase                " ignore case if lowercase search, case-sensitive otherwise
+set incsearch                " live matching
+set hlsearch                 " highlight match
+set gdefault                 " /g options per default, match all result in a line
+map <leader><space> :noh<cr> " Get rid of highlighting
+
+" Parenthesis
+set showmatch                   " show matching parenthesis
+runtime macros/matchit.vim      " better parenthesis matching
+nmap <tab> %                    " tab to go to corresponding parenthesis
 vmap <tab> %
 
 " Soft/hard wrapping
