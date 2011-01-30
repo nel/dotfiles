@@ -23,6 +23,12 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
+#git status is insanely slow in case of big project with a lot of submodule.
+##The git prompt check the state of the repository (dirty or not) and do a git
+##status for that, it thus add a noticable delay. I avoid it by monkey patching
+##the shell fct, git repo is always clean (this is what is the best THEME wise)
+parse_git_dirty () { echo "$ZSH_THEME_GIT_PROMPT_CLEAN" }
+
 #feature detection
 source $HOME/.detect_resources
 
