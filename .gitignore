@@ -1,3 +1,4 @@
+vim/tmp/undo/%*
 bin/vim-update-bundles
 *~
 *.swp

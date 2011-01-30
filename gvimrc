@@ -1,9 +1,10 @@
 " Not support in the osX vi and version conditional does not work either
-set relativenumber
-set undofile
-set colorcolumn=85
+set relativenumber                  " Display line relative to current position
+set undofile                        " Use undofile to persist undo accross session
+set undodir=~/.vim/tmp/undo/        " Undofile folder instead of $PWD
+set colorcolumn=85                  " Display a line at X columns
 
-" MacVim {{{2
+" MacVim
 if has('gui_macvim')
     " Full-screen mode uses the full screen
     set fuoptions=maxvert,maxhorz
