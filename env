@@ -1,0 +1,41 @@
+export PATH="$HOME/.bin:$PATH:$HOME/.gem/ruby/1.8/bin"
+export LC_ALL="en_US.UTF-8"
+
+## DETECT FEATURES
+
+#homebrew
+type brew &>/dev/null && export brew_path=`brew --prefix` && export has_brew=1
+if [[ -n $brew_path ]]; then
+    export PATH=$brew_path/bin:$brew_path/sbin:$PATH
+    export MANPATH=$brew_path/share/man:$MANPATH
+fi
+
+#rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" && export has_rvm=1
+
+#mvim
+type mvim &>/dev/null && export has_mvim=1
+
+#textmate
+type mate &>/dev/null && export has_mate=1
+
+## Setup proper EDITOR and Non blocking Editor
+if [ $has_mvim ]; then
+    NB_EDITOR="mvim"
+
+    #fix problem with loss of focus
+    if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
+        export NB_EDITOR="$NB_EDITOR -c \"au VimLeave * !open -a iTerm\""
+    elif [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
+        export NB_EDITOR="$NB_EDITOR -c \"au VimLeave * !open -a Terminal\""
+    fi
+
+    export EDITOR="$NB_EDITOR -g -f"
+elif [ $has_mate ]; then
+    export NB_EDITOR='mate'
+    export EDITOR='mate -w'
+else
+    export NB_EDITOR='vi'
+    export EDITOR='vi -f'
+fi
+export GIT_EDITOR=$EDITOR
