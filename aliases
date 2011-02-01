@@ -1,5 +1,12 @@
 alias g='git'
-alias gst='git status'
+alias gs='git status '
+alias gst='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+
 alias flushcache='dscacheutil -flushcache'
 alias top='top -ocpu'
 alias unload='launchctl unload -w'
@@ -16,7 +23,7 @@ alias ll="ls -lah"
 alias lm='ll | less'
 alias sl=ls
 
-alias vi=$EDITOR
+[ $has_mvim ] && alias vi=$NB_EDITOR
 
 #Update homebrew software
 alias brew_update_all="brew outdated | cut -f 1 | xargs brew install"
