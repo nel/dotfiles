@@ -3,6 +3,7 @@
   co = checkout
   ci = commit
   br = branch
+  h  = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [color]
   diff = auto
   status = auto
@@ -18,7 +19,7 @@
 [core]
   editor = vim
   autocrlf = input
-	safecrlf = true
+  safecrlf = true
 [branch]
   # When creating a new branch off a remote branch, always set it up to
   # track the remote branch so that we can pull from there.
