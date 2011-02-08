@@ -29,11 +29,8 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 ##the shell fct, git repo is always clean (this is what is the best THEME wise)
 parse_git_dirty () { echo "$ZSH_THEME_GIT_PROMPT_CLEAN" }
 
-#feature detection
-source $HOME/.detect_resources
-
 #PATH, EDITOR, ...
-source $HOME/.paths
+source $HOME/.env
 
 #alias
 source $HOME/.aliases
