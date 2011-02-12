@@ -1,7 +1,11 @@
-export PATH="$HOME/.bin:$PATH:$HOME/.gem/ruby/1.8/bin"
+export PATH="$HOME/.bin:$PATH"
 export LC_ALL="en_US.UTF-8"
 
 ## DETECT FEATURES
+
+#Ruby gems exec
+[[ -s "$HOME/.gem/ruby/1.8/bin" ]] && export PATH="$PATH:$HOME/.gem/ruby/1.8/bin"
+[[ -s "/usr/lib/ruby/user-gems/1.8/bin/" ]] && export PATH="$PATH:/usr/lib/ruby/user-gems/1.8/bin/"
 
 #homebrew
 type brew &>/dev/null && export brew_path=`brew --prefix` && export has_brew=1
