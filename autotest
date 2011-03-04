@@ -1,9 +1,12 @@
 begin
-    require 'autotest/fsevent' #maconly
-    require 'autotest/growl'
+    require 'autotest/fsevent' #mac only
+    require 'autotest/growl'   #mac only
 rescue LoadError
   puts 'for improved autotest XP on OSX please "gem install autotest-fsevent autotest-growl"'
 end
+
+require 'autotest/bundler' #support bundle exec implicitly
+require 'autotest/restart' #reload autotest if modifying .autotest
 
 Autotest.add_hook :initialize do |autotest|
   %w{.git .svn .hg .DS_Store ._* vendor tmp log doc}.each do |exception|
