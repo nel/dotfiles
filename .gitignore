@@ -2,6 +2,7 @@ vim/tmp/undo/%*
 bin/vim-update-bundles
 *~
 *.swp
+*.swo
 vim/autoload
 vim/plugin
 vim/doc
