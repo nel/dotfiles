@@ -24,8 +24,3 @@ alias lm='ll | less'
 alias sl=ls
 
 [ $has_mvim ] && alias vi=$NB_EDITOR
-
-#Update homebrew software
-alias brew_update_all="brew outdated | cut -f 1 | xargs brew install"
-
-
