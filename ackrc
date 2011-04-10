@@ -5,7 +5,9 @@
 --type-set=cucumber=.feature
 --ignore-dir=migrations
 --ignore-dir=log
---ignore-dir=vendor
+--ignore-dir=vendor/cache
+--ignore-dir=vendor/gems
+--ignore-dir=vendor/rails
 --ignore-dir=tmp
 --ignore-dir=doc
 --ignore-dir=coverage
