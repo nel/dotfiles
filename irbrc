@@ -54,8 +54,8 @@ rescue LoadError
 end
 
 begin
-  # 'lp' to show method lookup path
-  require 'looksee/shortcuts'
+  # Add Object#ls to display methods
+  require 'looksee'
 rescue LoadError
   puts "looksee is not installed. To enable, run: gem install looksee"
 end
