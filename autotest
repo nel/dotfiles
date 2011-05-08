@@ -1,6 +1,9 @@
 begin
-    require 'autotest/fsevent' #mac only
-    require 'autotest/growl'   #mac only
+  require 'autotest/fsevent' #mac only
+  require 'autotest/growl'   #mac only
+
+  Autotest::Growl::hide_label = true
+
 rescue LoadError
   puts 'for improved autotest XP on OSX please "gem install autotest-fsevent autotest-growl"'
 end
