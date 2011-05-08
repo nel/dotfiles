@@ -34,7 +34,7 @@ set backspace=indent,eol,start  " backspc over every char in insert mode
 set laststatus=2                " Always a status line
 set history=1000                " remember more commands and search history
 set undolevels=1000             " use many muchos levels of undo
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.rbx,*~ " ignore during file completion
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.rbx,*~,vendor/cache/*,sass-cache/*,tmp/* " ignore during file completion
 set title                       " change the terminal's title
 set visualbell                  " beep visually
 set noerrorbells                " don't beep
