@@ -143,8 +143,5 @@ set mouse=a
 " BUNDLE: git://github.com/vim-ruby/vim-ruby.git
 " BUNDLE: git://github.com/tpope/vim-rails.git
 " BUNDLE: git://github.com/tpope/vim-rake.git
-" BUNDLE: git://github.com/tpope/vim-cucumber.git
 " BUNDLE: git://github.com/taq/vim-rspec.git
-" # BUNDLE: git://github.com/tpope/vim-haml.git
-" BUNDLE: git://github.com/astashov/vim-ruby-debugger.git
 
