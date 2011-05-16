@@ -19,7 +19,7 @@ export DISABLE_AUTO_UPDATE="true"
 plugins=(brew cap gem git rails rails3 ruby vagrant bundler)
 
 # Use homebrew zsh path
-fpath=(/usr/local/Cellar/zsh/4.3.11/share/zsh/site-functions /usr/local/Cellar/zsh/4.3.11/share/zsh/functions $fpath)
+fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh/4.3.11/share/zsh/functions $fpath)
 
 source $ZSH/oh-my-zsh.sh
 
