@@ -23,4 +23,4 @@ alias ll="ls -lah"
 alias lm='ll | less'
 alias sl=ls
 
-[ $has_mvim ] && alias vi=$NB_EDITOR
+[ $has_mvim ] && alias vi=$NB_EDITOR -p
