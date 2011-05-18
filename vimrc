@@ -126,18 +126,19 @@ endif
 " Mouse
 set mouse=a
 
-" BUNDLE: git://github.com/scrooloose/nerdtree.git
+" BUNDLE:git://github.com/scrooloose/nerdtree.git
 
-" BUNDLE: https://github.com/wincent/Command-T.git 
+" BUNDLE: git://github.com/wincent/Command-T.git 
 " BUNDLE-COMMAND: if which rvm >/dev/null 2>&1; then rvm system exec rake make; else rake make; fi
 
 " BUNDLE: git://github.com/chrismetcalf/vim-yankring.git
  
-" BUNDLE: https://github.com/mileszs/ack.vim.git
+" BUNDLE: git://github.com/mileszs/ack.vim.git
 " BUNDLE: git://github.com/tpope/vim-fugitive.git
 " BUNDLE: git://github.com/vim-scripts/jQuery.git
 " BUNDLE: git://github.com/tpope/vim-git.git
 " BUNDLE: git://github.com/tpope/vim-markdown.git
+" BUNDLE: git://github.com/nel/vim-css-color.git
 
 " Ruby/Rails Programming:
 " BUNDLE: git://github.com/vim-ruby/vim-ruby.git
