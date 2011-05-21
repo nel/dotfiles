@@ -37,3 +37,6 @@
 [submodule "vim/bundle/rspec"]
 	path = vim/bundle/rspec
 	url = git://github.com/taq/vim-rspec.git
+[submodule "vendor/vim-update-bundles"]
+	path = vendor/vim-update-bundles
+	url = https://github.com/bronson/vim-update-bundles.git

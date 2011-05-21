@@ -1,5 +1,5 @@
 vim/tmp/undo/%*
-bin/vim-update-bundles
+bin/update-movies
 *~
 *.swp
 *.swo
