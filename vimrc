@@ -88,10 +88,10 @@ let NERDTreeIgnore=['.vim$', '\~$']
 " MOVEMENT ---------------------------------------
 
 " Use the damn jkl; keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
+nnoremap <Left> :echoe "Use h !!!"<CR>
+nnoremap <Right> :echoe "Use l !!!"<CR>
+nnoremap <Up> :echoe "Use k !!!"<CR>
+nnoremap <Down> :echoe "Use j !!!"<CR>
 
 "       Quick window switch.
 noremap <C-j>  <C-w>j
