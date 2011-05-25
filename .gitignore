@@ -1,5 +1,6 @@
 vim/tmp/undo/%*
 bin/update-movies
+bin/rvm*
 *~
 *.swp
 *.swo
