@@ -8,9 +8,9 @@ set nocompatible
 set modelines=0
 
 " Tabs/spaces
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set shiftround                  " use multiple of shiftwidth when indenting
 set autoindent                  " use auto indent, use set paste to copy text in Term
@@ -51,6 +51,7 @@ set backup                          " enable backups
 let mapleader = ","                 " Remap leader key to more accessible one
 
 " Searching
+" activate magic sequence in search, all regexp special char need escaping
 nnoremap / /\v
 vnoremap / /\v
 set ignorecase               " ignore case
