@@ -11,7 +11,6 @@ alias gca='git commit --amend'
 alias gm='git commit -m'
 alias gd='git diff'
 alias go='git checkout'
-alias ga='git add'
 alias gh='git push'
 alias gp='git pull'
 alias gpr='git pull --rebase'
@@ -22,10 +21,7 @@ alias gcl='git clean -fd'
 
 alias flushcache='dscacheutil -flushcache'
 alias top='top -ocpu'
-alias unload='launchctl unload -w'
-alias load='launchctl load -w'
-alias start_mysql='load ~/Library/LaunchDaemons/com.mysql.mysqld.plist'
-alias stop_mysql='unload ~/Library/LaunchDaemons/com.mysql.mysqld.plist'
+
 alias ev="vi ~/.vimrc"
 alias eb="vi ~/.bashrc"
 alias sb="source ~/.bashrc"
