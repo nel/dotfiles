@@ -9,6 +9,8 @@ alias gb='git branch'
 alias gc='git commit'
 alias gca='git commit --amend'
 alias gm='git commit -m'
+alias gm.='git commit . -m'
+alias grm='git commit -fr'
 alias gd='git diff'
 alias go='git checkout'
 alias gh='git push'
@@ -32,4 +34,4 @@ alias ll="ls -lah"
 alias lm='ll | less'
 alias sl=ls
 
-[ $has_mvim ] && alias vi=$NB_EDITOR -p
+[ $has_mvim ] && alias vi="${NB_EDITOR} --remote-tab-silent"
