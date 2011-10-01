@@ -10,4 +10,5 @@ vim/doc
 vim/.netrwhist
 vim/syntax
 vim/vimrc
-vim/tmp/swap/.*
+vim/tmp/swap
+
