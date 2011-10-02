@@ -3,7 +3,7 @@
   co = checkout
   ci = commit
   br = branch
-  h  = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  lo  = log --pretty=format:\"%Cred%h%Creset %Cblue%ad%Creset %s%d [%Cgreen%an%Creset]\" --graph --date=short
 [color]
   diff = auto
   status = auto
