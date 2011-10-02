@@ -24,7 +24,3 @@
   # When creating a new branch off a remote branch, always set it up to
   # track the remote branch so that we can pull from there.
   autoseupmerge = always
-
-[github]
-	user = nel
-	token = 4e2fc046cf9dceb1ac89725fb3ce0ca1
