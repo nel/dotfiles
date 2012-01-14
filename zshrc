@@ -16,7 +16,7 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(cap gem rails rails3 ruby vagrant bundler rvm brew pow autojump cloudapp knife)
+plugins=(cap gem rails rails3 ruby vagrant rvm brew pow autojump cloudapp knife)
 
 # Use homebrew zsh path
 [[ -s  /usr/local/share/zsh/ ]] && fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh/functions $fpath)
@@ -38,4 +38,4 @@ source $HOME/.env
 #alias
 source $HOME/.aliases
 
-[[ -s  $HOME/.local_zshrc ]] && .  $HOME/.local_zshrc
+[[ -s  $HOME/.zshrc.local ]] && .  $HOME/.zshrc.local
