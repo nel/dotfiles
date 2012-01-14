@@ -1,5 +1,9 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+" Bundle: tpope/vim-pathogen
+call pathogen#infect()
+
 filetype off
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 
 set nocompatible
@@ -129,8 +133,8 @@ set mouse=a
 
 " BUNDLE:git://github.com/scrooloose/nerdtree.git
 
-" BUNDLE: git://github.com/wincent/Command-T.git 
-" BUNDLE-COMMAND: if which rvm >/dev/null 2>&1; then rvm system exec rake make; else rake make; fi
+" BUNDLE: https://github.com/wincent/Command-T.git
+" BUNDLE-COMMAND: cd command-t && rake make
 
 " BUNDLE: git://github.com/chrismetcalf/vim-yankring.git
  
