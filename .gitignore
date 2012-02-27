@@ -1,3 +1,5 @@
+bin/vim-update-bundles
+Trashed-Bundles
 vim/tmp/undo/%*
 bin/update-movies
 bin/rvm*
