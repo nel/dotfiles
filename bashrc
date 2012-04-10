@@ -1,3 +1,5 @@
+shopt -s expand_aliases
+
 source ~/.env
 source ~/.bash/completion
 source ~/.bash/config
