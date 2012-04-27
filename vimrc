@@ -107,6 +107,8 @@ noremap <leader>w <C-w>v<C-w>l
 " Clean whitespace
 map <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
+map ; :
+
 " Ack
 map <leader>a :Ack 
 
