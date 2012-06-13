@@ -23,6 +23,7 @@ set smarttab                    " insert tabs on the start of a line according t
                                 "    shiftwidth, not tabstop
 
 " Basic options
+set number
 set autowrite                   " Automatically save before commands like :next and :make
 set encoding=utf-8              " 2011 baby !
 set scrolloff=3
@@ -75,6 +76,7 @@ vmap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
+
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set list
@@ -141,15 +143,6 @@ set mouse=a
 " BUNDLE: git://github.com/chrismetcalf/vim-yankring.git
  
 " BUNDLE: git://github.com/mileszs/ack.vim.git
-" BUNDLE: git://github.com/tpope/vim-fugitive.git
-" BUNDLE: git://github.com/vim-scripts/jQuery.git
-" BUNDLE: git://github.com/tpope/vim-git.git
 " BUNDLE: git://github.com/tpope/vim-markdown.git
 " BUNDLE: git://github.com/nel/vim-css-color.git
-
-" Ruby/Rails Programming:
-" BUNDLE: git://github.com/vim-ruby/vim-ruby.git
-" BUNDLE: git://github.com/tpope/vim-rails.git
-" BUNDLE: git://github.com/tpope/vim-rake.git
-" BUNDLE: git://github.com/taq/vim-rspec.git
 
