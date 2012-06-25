@@ -14,9 +14,6 @@ if [[ -n $brew_path ]]; then
     export MANPATH=$brew_path/share/man:$MANPATH
 fi
 
-#rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" && export has_rvm=1
-
 #mvim
 type mvim &>/dev/null && export has_mvim=1
 

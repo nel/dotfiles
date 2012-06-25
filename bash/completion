@@ -7,9 +7,6 @@ complete -C ~/.bash/completion_scripts/rake_completion -o default rake
 #Capistrano
 complete -C ~/.bash/completion_scripts/capistrano_completion -o default cap
 
-#rvm completion
-[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
-
 if [[ -n $brew_path ]]; then
     #Homebrew Completion (require homebrew)
     [[ -s $brew_path/Library/Contributions/brew_bash_completion.sh ]] && source $brew_path/Library/Contributions/brew_bash_completion.sh

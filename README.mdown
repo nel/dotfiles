@@ -49,10 +49,6 @@ If homebrew is installed all path will be configured including manpage
 If you install bash_completion package you'll get completion for some package
 like ack and git
 
-## Rvm
-
-If installed rvm will be loaded
-
 ## Bindings
 
 You can access ^R history search and navigate through the results by simply using
