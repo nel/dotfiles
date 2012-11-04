@@ -1,5 +1,5 @@
 alias g='git'
-alias gs='git status'
+alias gs='git status -sb'
 alias gsu='git submodule update --init'
 alias gl='git log'
 alias glp='git log -p'
