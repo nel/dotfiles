@@ -57,8 +57,8 @@ let mapleader = ","                 " Remap leader key to more accessible one
 
 " Searching
 " activate magic sequence in search, all regexp special char need escaping
-nnoremap / /\v
-vnoremap / /\v
+"nnoremap / /\v
+"vnoremap / /\v
 set ignorecase               " ignore case
 set smartcase                " ignore case if lowercase search, case-sensitive otherwise
 set incsearch                " live matching
