@@ -9,6 +9,7 @@
   status = auto
   branch = auto
   interactive = auto
+	ui = 1
 [user]
   email = nel@w3fu.com
   name = Renaud (Nel) Morvan
@@ -24,3 +25,7 @@
   # When creating a new branch off a remote branch, always set it up to
   # track the remote branch so that we can pull from there.
   autoseupmerge = always
+[rerere]
+	enabled = 1
+[help]
+	autocorrect = 1
