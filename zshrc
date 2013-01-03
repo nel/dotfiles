@@ -16,7 +16,7 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump brew)
+plugins=(brew)
 # Use homebrew zsh path
 [[ -s  /usr/local/share/zsh/ ]] && fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh/functions $fpath)
 
