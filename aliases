@@ -1,25 +1,21 @@
-alias g='git'
-alias gs='git status -sb'
-alias gsu='git submodule update --init'
-alias gl='git log'
-alias glp='git log -p'
-alias glo='git lo'
-alias ga='git add -A'
-alias gb='git branch'
-alias gc='git commit'
-alias gca='git commit --amend'
-alias gm='git commit -m'
-alias gm.='git commit . -m'
-alias grm='git commit -fr'
-alias gd='git diff'
-alias go='git checkout'
-alias gh='git push'
-alias gp='git pull'
-alias gpr='git pull --rebase'
-alias gr='git rebase'
-alias gri='git rebase -i'
-alias grt='git reset'
-alias gcl='git clean -fd'
+function g()    { git $1; }
+function gs()   { git status -sb $1; }
+function gsu()  { git submodule update --init $1; }
+function gl()   { git log $1; }
+function glp()  { git log -p $1; }
+function glo()  { git lo $1; }
+function ga()   { git add -A $1; }
+function gb()   { git branch $1; }
+function gc()   { git commit $1; }
+function gca()  { git commit --amend $1; }
+function gm()   { git commit -m $1; }
+function gm.()  { git commit . -m $1; }
+function gd()   { git diff $1; }
+function go()   { git checkout $1; }
+function gh()   { git push $1; }
+function gp()   { git pull $1; }
+function gpr()  { git pull --rebase $1; }
+function gcl()  { git clean -fd $1; }
 
 alias flushcache='dscacheutil -flushcache'
 alias top='top -ocpu'
