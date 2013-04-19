@@ -1,21 +1,22 @@
-function g()    { git $1; }
-function gs()   { git status -sb $1; }
-function gsu()  { git submodule update --init $1; }
-function gl()   { git log $1; }
-function glp()  { git log -p $1; }
-function glo()  { git lo $1; }
-function ga()   { git add -A $1; }
-function gb()   { git branch $1; }
-function gc()   { git commit $1; }
-function gca()  { git commit --amend $1; }
-function gm()   { git commit -m $1; }
-function gm.()  { git commit . -m $1; }
-function gd()   { git diff $1; }
-function go()   { git checkout $1; }
-function gh()   { git push $1; }
-function gp()   { git pull $1; }
-function gpr()  { git pull --rebase $1; }
-function gcl()  { git clean -fd $1; }
+function g()    { git $*; }
+function gs()   { git status -sb $*; }
+function gsu()  { git submodule update --init $*; }
+function gl()   { git log $*; }
+function glp()  { git log -p $*; }
+function glo()  { git lo $*; }
+function ga()   { git add -A $*; }
+function gb()   { git branch $*; }
+function gc()   { git commit $*; }
+function gca()  { git commit --amend $*; }
+function gm()   { git commit -m $*; }
+function gm.()  { git commit . -m $*; }
+function gd()   { git diff $*; }
+function go()   { git checkout $*; }
+function gh()   { git push $*; }
+function gp()   { git pull $*; }
+function gpr()  { git pull --rebase $*; }
+function gcl()  { git clean -fd $*; }
+function gi()   { git update-index --assume-unchanged  $*; }
 
 alias flushcache='dscacheutil -flushcache'
 alias top='top -ocpu'
