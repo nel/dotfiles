@@ -10,8 +10,8 @@ function gc()   { git commit $*; }
 function gca()  { git commit --amend $*; }
 function gm()   { git commit -m $*; }
 function gm.()  { git commit . -m $*; }
-function gd()   { git diff $*; }
-function go()   { git checkout $*; }
+function gd()   { git diff --word-diff $*; }
+#function go()   { git checkout $*; }
 function gh()   { git push $*; }
 function gp()   { git pull $*; }
 function gpr()  { git pull --rebase $*; }
