@@ -23,14 +23,6 @@ type mate &>/dev/null && export has_mate=1
 ## Setup proper EDITOR and Non blocking Editor
 if [ $has_mvim ]; then
     NB_EDITOR="mvim"
-
-    #fix problem with loss of focus
-    if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
-        export NB_EDITOR="$NB_EDITOR -c \"au VimLeave * !open -a iTerm\""
-    elif [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
-        export NB_EDITOR="$NB_EDITOR -c \"au VimLeave * !open -a Terminal\""
-    fi
-
     export EDITOR="$NB_EDITOR -g -f"
 elif [ $has_mate ]; then
     export NB_EDITOR='mate'
