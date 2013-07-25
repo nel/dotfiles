@@ -17,9 +17,6 @@ fi
 #mvim
 type mvim &>/dev/null && export has_mvim=1
 
-#textmate
-type mate &>/dev/null && export has_mate=1
-
 #sublime
 type subl &>/dev/null && export has_subl=1
 
