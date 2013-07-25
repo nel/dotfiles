@@ -20,13 +20,17 @@ type mvim &>/dev/null && export has_mvim=1
 #textmate
 type mate &>/dev/null && export has_mate=1
 
+#sublime
+type subl &>/dev/null && export has_subl=1
+
+
 ## Setup proper EDITOR and Non blocking Editor
 if [ $has_mvim ]; then
     NB_EDITOR="mvim"
     export EDITOR="$NB_EDITOR -g -f"
-elif [ $has_mate ]; then
-    export NB_EDITOR='mate'
-    export EDITOR='mate -w'
+elif [ $has_subl ]; then
+    export NB_EDITOR='subl'
+    export EDITOR='subl -w'
 else
     export NB_EDITOR='vi'
     export EDITOR='vi -f'
