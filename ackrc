@@ -12,6 +12,7 @@
 --ignore-dir=vendor/cache
 --ignore-dir=vendor/gems
 --ignore-dir=vendor/rails
+--ignore-dir=vendor/bundle
 --ignore-dir=tmp
 --ignore-dir=doc
 --ignore-dir=coverage
