@@ -2,7 +2,7 @@ function g()    { git $*; }
 function gs()   { git status -sb $*; }
 function gsu()  { git submodule update --init $*; }
 function gl()   { git log $*; }
-function glp()  { git log -p $*; }
+function glp()  { git log -p --word-diff $*; }
 function glo()  { git lo $*; }
 function ga()   { git add -A $*; }
 function gb()   { git branch $*; }
