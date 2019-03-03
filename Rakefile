@@ -6,20 +6,7 @@ require 'open-uri'
 task :default => [:install]
 
 desc "Install or update the whole package"
-task :install => [:setup_dotfiles, :setup_vim]
-
-desc "Install vim-update-bundles and pathogen"
-task :setup_vim do
-    vim_update_bundles = "https://github.com/bronson/vim-update-bundles/raw/master/vim-update-bundles"
-    vim_update_bundles_target = File.join(ENV['HOME'], '.bin', 'vim-update-bundles')
-
-    puts "Install vim-update-bundles utility from #{vim_update_bundles}"
-    download_file vim_update_bundles, vim_update_bundles_target
-    File.chmod(0755, vim_update_bundles_target)
-    puts "Execute #{vim_update_bundles_target}"
-    Kernel.exec(vim_update_bundles_target)
-
-end
+task :install => [:setup_dotfiles]
 
 desc "Install the dot files into user's home directory"
 task :setup_dotfiles do

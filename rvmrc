@@ -1,4 +1,0 @@
-export rvm_path="$HOME/.rvm"
-export rvm_install_on_use_flag=1
-export rvm_archflags="-arch x86_64" #osx
-export rvm_pretty_print_flag=1

@@ -1,12 +1,6 @@
 #Tab Completions
 set completion-ignore-case On
 
-#Rake
-complete -C ~/.bash/completion_scripts/rake_completion -o default rake
-
-#Capistrano
-complete -C ~/.bash/completion_scripts/capistrano_completion -o default cap
-
 if [[ -n $brew_path ]]; then
     #Homebrew Completion (require homebrew)
     [[ -s $brew_path/Library/Contributions/brew_bash_completion.sh ]] && source $brew_path/Library/Contributions/brew_bash_completion.sh

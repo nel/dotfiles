@@ -18,17 +18,6 @@ function gpr()  { git pull --rebase $*; }
 function gcl()  { git clean -fd $*; }
 function gi()   { git update-index --assume-unchanged  $*; }
 
-alias flushcache='dscacheutil -flushcache'
 alias top='top -ocpu'
-
-alias ev="vi ~/.vimrc"
-alias eb="vi ~/.bashrc"
-alias sb="source ~/.bashrc"
-alias ez="vi ~/.zshrc"
-alias sz="source ~/.zshrc"
-
-alias ll="ls -lah"
-alias lm='ll | less'
-alias sl=ls
 
 [ $has_mvim ] && alias vi="${NB_EDITOR} --remote-tab-silent"

@@ -3,16 +3,12 @@ export LC_ALL="en_US.UTF-8"
 
 ## DETECT FEATURES
 
-#Ruby gems exec
-[[ -s "$HOME/.gem/ruby/1.8/bin" ]] && export PATH="$PATH:$HOME/.gem/ruby/1.8/bin"
-[[ -s "/usr/lib/ruby/user-gems/1.8/bin/" ]] && export PATH="$PATH:/usr/lib/ruby/user-gems/1.8/bin/"
-
 #homebrew
-type brew &>/dev/null && export brew_path=`brew --prefix` && export has_brew=1
-if [[ -n $brew_path ]]; then
-    export PATH=$brew_path/bin:$brew_path/sbin:$PATH
-    export MANPATH=$brew_path/share/man:$MANPATH
-fi
+#type brew &>/dev/null && export brew_path=`brew --prefix` && export has_brew=1
+#if [[ -n $brew_path ]]; then
+#    export PATH=$brew_path/bin:$brew_path/sbin:$PATH
+#    export MANPATH=$brew_path/share/man:$MANPATH
+#fi
 
 #mvim
 type mvim &>/dev/null && export has_mvim=1

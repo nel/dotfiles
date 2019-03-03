@@ -22,8 +22,6 @@ https://github.com/ryanb/dotfiles but the content itself differ.
 
 The zsh part rely on the excellent https://github.com/robbyrussell/oh-my-zsh
 
-The vim plugins are versioned through the excellent 
-https://github.com/bronson/vim-update-bundles
 
 # Installation:
     
@@ -38,10 +36,6 @@ Don't forget to reload your terminal or source the  ~/.bashrc and ~/.zshrc to
 enjoy it.
 
 # Global customizations (for bash & zsh)
-
-## Iterm:
-
-If you use iterm or iterm 2 on OSX you'll get tab and windows title customized
 
 ## Homebrew:
 
@@ -75,15 +69,6 @@ The included .zshrc depends on oh-my-zsh https://github.com/robbyrussell/oh-my-z
 To install it run:
 
     wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
-
-# Vim
-
-If you intend to use the vim configuration, you must run vim-update-bundles to 
-download all the dependencies:
-
-    ~/bin/vim-update-bundles
-
-It will download and configure all the plugins, just reload and your done
 
 # Troubleshooting
 

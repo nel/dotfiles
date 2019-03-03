@@ -1,9 +1,0 @@
-# Draw ASCII tables
-begin
-  require 'hirb'
-  require 'hirb/import_object'
-  Hirb.enable
-  extend Hirb::Console
-rescue LoadError
-  puts "hirb is not installed. To enable, run: gem install hirb"
-end

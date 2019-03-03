@@ -1,9 +1,4 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-" Bundle: tpope/vim-pathogen
-call pathogen#infect()
-
 filetype off
-"call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 
 set nocompatible
@@ -68,7 +63,6 @@ map <leader><space> :noh<cr> " Get rid of highlighting
 
 " Parenthesis
 set showmatch                   " show matching parenthesis
-runtime macros/matchit.vim      " better parenthesis matching
 nmap <tab> %                    " tab to go to corresponding parenthesis
 vmap <tab> %
 
@@ -86,10 +80,6 @@ set listchars=tab:▸\ ,eol:¬
 syntax on
 set background=dark
 colorscheme molokai
-
-" NERD Tree
-map <leader>n :NERDTreeToggle<cr>
-let NERDTreeIgnore=['.vim$', '\~$']
 
 " MOVEMENT ---------------------------------------
 
@@ -134,15 +124,4 @@ endif
 
 " Mouse
 set mouse=a
-
-" BUNDLE:git://github.com/scrooloose/nerdtree.git
-
-" BUNDLE: https://github.com/wincent/Command-T.git
-" BUNDLE-COMMAND: cd command-t && rake make
-
-" BUNDLE: git://github.com/chrismetcalf/vim-yankring.git
- 
-" BUNDLE: git://github.com/mileszs/ack.vim.git
-" BUNDLE: git://github.com/tpope/vim-markdown.git
-" BUNDLE: git://github.com/nel/vim-css-color.git
 
