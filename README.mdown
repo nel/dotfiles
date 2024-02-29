@@ -66,10 +66,6 @@ you to maintain than hacking directly in the .bashrc.
 
 The included .zshrc depends on oh-my-zsh https://github.com/robbyrussell/oh-my-zsh
 
-To install it run:
-
-    wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
-
 # Troubleshooting
 
 Have you reload / source your environment dude ?
