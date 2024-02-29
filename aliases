@@ -19,5 +19,3 @@ function gcl()  { git clean -fd $*; }
 function gi()   { git update-index --assume-unchanged  $*; }
 
 alias top='top -ocpu'
-
-[ $has_mvim ] && alias vi="${NB_EDITOR} --remote-tab-silent"

@@ -3,27 +3,13 @@ export LC_ALL="en_US.UTF-8"
 
 ## DETECT FEATURES
 
-#homebrew
-#type brew &>/dev/null && export brew_path=`brew --prefix` && export has_brew=1
-#if [[ -n $brew_path ]]; then
-#    export PATH=$brew_path/bin:$brew_path/sbin:$PATH
-#    export MANPATH=$brew_path/share/man:$MANPATH
-#fi
-
-#mvim
-type mvim &>/dev/null && export has_mvim=1
-
-#sublime
-type subl &>/dev/null && export has_subl=1
-
+#neovim
+type nvim &>/dev/null && export has_nvim=1
 
 ## Setup proper EDITOR and Non blocking Editor
-if [ $has_mvim ]; then
-    NB_EDITOR="mvim"
-    export EDITOR="$NB_EDITOR -g -f"
-elif [ $has_subl ]; then
-    export NB_EDITOR='subl'
-    export EDITOR='subl -w'
+if [ $has_nvim ]; then
+    NB_EDITOR="nvim"
+    export EDITOR="$NB_EDITOR"
 else
     export NB_EDITOR='vi'
     export EDITOR='vi -f'
