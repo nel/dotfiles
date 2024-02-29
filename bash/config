@@ -6,14 +6,6 @@ export HISTCONTROL=erasedups #no duplicate
 export HISTSIZE=10000
 shopt -s histappend
 
-#EC2
-[[ -s "$HOME/.ec2/.ec2_env" ]] && . "$HOME/.ec2/.ec2_env"
-
-#Set title initerm
-if [ $TERM_PROGRAM == "iTerm.app" ]; then
-    export PROMPT_COMMAND='echo -ne "\033]2;[bash] ${USER}@${HOSTNAME%%.*}: ${PWD/#$HOME/~}\007";echo -ne "\033]1;$(basename "$(dirname "$PWD")")/$(basename "$PWD")\007"';
-fi
-
 #prompt
 __ruby_ps1 ()
 {
