@@ -12,7 +12,7 @@ function gm()   { git commit -m $*; }
 function gm.()  { git commit . -m $*; }
 function gd()   { git diff --word-diff $*; }
 #function go()   { git checkout $*; }
-function gh()   { git push $*; }
+#function gh()   { git push $*; }
 function gp()   { git pull $*; }
 function gpr()  { git pull --rebase $*; }
 function gcl()  { git clean -fd $*; }
