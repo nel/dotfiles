@@ -1,9 +1,0 @@
-# display the source code on every step (list command auto executed)
-set autolist
-# if you type a command that is not supported by rdebub it will evaluate it in the current frame
-set autoeval
-# will reload the source code automaticaly if you modify it
-set autoreload
-# will force each step to be on a new line (won't trigger step several times per line)
-set forcestep
-
